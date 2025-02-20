@@ -38,7 +38,7 @@ const ChatArea = ({ selectedGroup, socket, setSelectedGroup }) => {
       //fetch messages
       fetchMessages();
       socket.emit("join room", selectedGroup?._id);
-      socket.on("message receive", (newMessage) => {
+      socket.on("message received", (newMessage) => {
         setMessages((prev) => [...prev, newMessage]);
       });
 
