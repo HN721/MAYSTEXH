@@ -36,9 +36,10 @@ const Register = () => {
 
       navigate("/login");
     } catch (error) {
+      console.log(error.response);
       toast({
         title: "Error",
-        description: error.response.data.message || "An error occurred",
+        description: error.response?.data?.message || "An error occurred",
         status: "error",
         duration: 5000,
         isClosable: true,

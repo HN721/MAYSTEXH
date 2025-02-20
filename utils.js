@@ -1,2 +1,2 @@
-const apiURL = "https://sman.vercel.app";
+const apiURL = "http://sman.vercel.app";
 export default apiURL;

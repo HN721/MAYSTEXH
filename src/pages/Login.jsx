@@ -33,14 +33,14 @@ const Login = () => {
       console.log(data.user);
 
       //save the token into localstorage
-      localStorage.setItem("userInfo", JSON.stringify(data.user));
+      localStorage.setItem("userInfo", JSON.stringify(data?.user));
       navigate("/chat");
     } catch (error) {
       console.log(error);
 
       toast({
         title: "Error",
-        description: error.response.data.message || "An error occurred",
+        description: error.response?.data?.message || "An error occurred",
         status: "error",
         duration: 5000,
         isClosable: true,
